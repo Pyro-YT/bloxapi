@@ -16,4 +16,4 @@ class Item:
         json = response.json()
         for item in json["Data"]: 
             item.append(User(item["name"], item["id"], item["price"]))
-        return json["item"]    
+        return json["price"]    
