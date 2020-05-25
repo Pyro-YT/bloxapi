@@ -1,0 +1,4 @@
+async def get_thumb(self): 
+        response = requests.get(url=f'https://thumbnails.roblox.com/v1/assets') 
+        json = response.json()["data"][0] 
+        return json["image"]
