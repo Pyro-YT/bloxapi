@@ -2,7 +2,7 @@ import json
 import asyncio
 import requests
 from .user import User
-from .utils.classes import Item
+from .item import Item
 
 class Client:
     """
@@ -32,4 +32,4 @@ class Client:
     async def get_item(self, id: int):
         response = requests.get(url=f'https://catalog.roblox.com/v1/search/items/details?id={id}')
         json = response.json()["data"][0]
-        return Item(json.get("name"), json.get("id"), json.get("price"))
+        return Item(json.get("name"), json.get("id"))
