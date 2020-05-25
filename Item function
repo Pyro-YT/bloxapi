@@ -14,6 +14,6 @@ class Item:
     async def get_item(self):
         response = requests.get(url=f'https://catalog.roblox.com/v1/search/items/details?id={int: id}')
         json = response.json()
-        for item in json["Data"]: 
+        for item in json["data"]: 
             item.append(User(item["name"], item["id"], item["price"]))
         return json["price"]    
