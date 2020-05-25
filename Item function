@@ -9,7 +9,6 @@ class Item:
 
         self.name = name
         self.id = id
-        self.price = price 
     
     async def get_item(self):
         response = requests.get(url=f'https://catalog.roblox.com/v1/search/items/details?id={self.id}')
