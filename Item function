@@ -14,5 +14,5 @@ class Item:
         response = requests.get(url=f'https://catalog.roblox.com/v1/search/items/details?id={self.id}')
         json = response.json()
         for item in json["data"]: 
-            item.append(User(item["name"], item["id"], item["price"]))
+            item.append(User(item["price"]))
         return json["price"]    
