@@ -1,4 +1,4 @@
-class item:
+class Item:
     """
     Represents an item.
     """
