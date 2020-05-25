@@ -1,0 +1,19 @@
+import json
+import asyncio
+import requests
+
+
+class Item:
+
+    def __init__(self, name: str, id: int, price: int):
+
+        self.name = name
+        self.id = id
+        self.price = price 
+    
+    async def get_item(self):
+        response = requests.get(url=f'https://catalog.roblox.com/v1/search/items/details?id={int: id}')
+        json = response.json()
+        for item in json["Data"]: 
+            item.append(User(item["name"], item["id"], item["price"]))
+        return json["item"]    
