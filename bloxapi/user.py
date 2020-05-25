@@ -1,22 +1,13 @@
 import json
 import asyncio
 import requests
+# from .utils import User
 
-class  item:
-        def __init__(self, name: str, id: int, price: int, rap: int):
 
-            self.name = name
-            self.id = id
-            self.price = price
-            self.rap = rap
-        
-        async def get_item(self): 
-            response = requests.get(url=f'https://catalog.roblox.com/v1/search/items/details?id={int: id}')
-            json = response.json()
-            return json["item"]
+
 
 class User:
-     def __init__(self, username: str, id: int):
+    def __init__(self, username: str, id: int):
         self.username = username
         self.id = id
 
@@ -42,9 +33,8 @@ class User:
         response = requests.get(url=f'https://users.roblox.com/v1/users/{self.id}')
         json = response.json()
         return json["created"].split('T')[0]
-    
-    async def get_item(self): 
-        response = requests.get()
+
+
 
 
 
