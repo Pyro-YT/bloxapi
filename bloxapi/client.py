@@ -1,35 +1,28 @@
-import json
-import asyncio
 import requests
-from .user import User
-from .item import Item
+import asyncio
+from .utils.errors import *
+import json
+
 
 class Client:
-    """
-    Client tingz
-    """
 
-    def __init__(self, cookie=None):
-        self.cookie = cookie
+    def __init__(self, Cookie=None):
+        self.Cookie = Cookie
+        self.cookies = {'.ROBLOSECURITY': f'{self.Cookie}'}
+        self.AuthenticateCookie()
+
+    def AuthenticateCookie(self):
+        request = requests.get(url='https://www.roblox.com/my/profile', cookies=self.cookies)
+        try:
+            request.json()
+        except json.decoder.JSONDecodeError:
+            raise FailedAuthentication('Invalid cookie was given.')
+
+    async def get_self(self):
+        if not self.Cookie:
+            raise NotAutenticated('You must be authenticated to execute this action.')
+        
+        data = requests.get(url='https://www.roblox.com/my/profile', cookies=self.cookies).json()
+        print(data)
 
 
-    async def get_user_by_username(self, username: str):
-        response = requests.get(url=f'https://api.roblox.com/users/get-by-username?username={username}')
-        json = response.json()
-        if response.status_code != 200 or not json.get('Id'):
-            return None
-        else:
-            return User(json["Username"], json["Id"])
-
-    async def get_user_by_id(self, id: int):
-        response = requests.get(url=f'https://api.roblox.com/users/{id}')
-        json = response.json()
-        if response.status_code != 200 or not json.get('Username'):
-            return None
-        else:
-            return User(json["Username"], json["Id"])
-
-    async def get_item(self, id: int):
-        response = requests.get(url=f'https://catalog.roblox.com/v1/search/items/details?id={id}')
-        json = response.json()["data"][0]
-        return Item(json.get("name"), json.get("id"))
