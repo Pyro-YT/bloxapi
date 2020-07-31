@@ -5,15 +5,12 @@
 A modern & simple to use API wrapper that handles ROBLOX interactions
 
 ### Key Features
-----
 
 - Covers a large majority of the ROBLOX API.
 - Modern Pythonic API using `async` and `await`.
 - Easy and super simple to use.
 
 ### Installing
----
-------------
 
 `pip install git+https://github.com/iranathan/robloxapi.git`
 `a`
