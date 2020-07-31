@@ -4,9 +4,7 @@ import asyncio
 client = bloxapi.Client(None)
 
 async def main():
-    user_object = await client.get_user_by_id(1)
-    if user_object:
-        print('This user exists!')
-        print(user_object.name, user_object.Id, user_object.status, user_object.about)
+    group = await client.get_group(1)
+    print(group.owner.name)
 
 asyncio.run(main())

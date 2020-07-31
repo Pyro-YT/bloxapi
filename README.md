@@ -1,20 +1,27 @@
-# What is bloxapi? # 
-Bloxapi is powerful API wrapper that contains large amount of roblox API's.
-Bloxapi is created 29/7/2020. Project is created by darealzz and smarsh1. 
+# bloxapi
 
-# Contributing # 
-Before every contributing check out Contributing rules! 
-Some of basic: Do not update things in master, make an a pull request, do not **flame** each other or being **toxic** to other contributors. 
+![](https://img.shields.io/github/stars/darealzz/bloxapi) ![](https://img.shields.io/github/forks/darealzz/bloxapi) ![](https://img.shields.io/github/license/darealzz/bloxapi) ![](https://img.shields.io/github/issues/darealzz/bloxapi)
 
-# License # 
-Bloxapi is under **MIT** license. Please check out this if you don't know what is "MIT" [MIT](https://en.wikipedia.org/wiki/MIT_License)
+A modern & simple to use API wrapper that handles ROBLOX interactions
 
-idk reserching now brb
-# Main Developers # 
-* darealzz 
-* smarsh1 
+### Key Features
+----
 
-# More Informations about this project #
-Bloxapi is made with Python. Bloxapi was made much earlier but its re-worked 27/7/2020. 
-* Project folders: 3 
-* Project Fi
+- Covers a large majority of the ROBLOX API.
+- Modern Pythonic API using `async` and `await`.
+- Easy and super simple to use.
+
+### Installing
+---
+
+`pip install git+https://github.com/darealzz/bloxapi.git`
+`a`
+
+    test
+    test
+
+```py
+print('a')
+test
+```
+
