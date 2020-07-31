@@ -12,11 +12,11 @@ A modern & simple to use API wrapper that handles ROBLOX interactions
 
 ### Installing
 
-    # Github installation
+    # Upgrade pip
+    # If 'python' does not work try 'py'
+    $ python -m pip install --upgrade pip
+
+    # Install the Module
     $ pip install git+https://github.com/darealzz/bloxapi.git
 
-```py
-print('a')
-test
-```
 

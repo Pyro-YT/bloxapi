@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="bloxapi",
+    name="bloxapi", 
     version="0.0.1",
     author="dareal",
     author_email="sikling247@gmail.com",
