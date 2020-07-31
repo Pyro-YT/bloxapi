@@ -12,11 +12,8 @@ A modern & simple to use API wrapper that handles ROBLOX interactions
 
 ### Installing
 
-`pip install git+https://github.com/iranathan/robloxapi.git`
-`a`
-
-    test
-    test
+    # Github installation
+    $ pip install git+https://github.com/darealzz/bloxapi.git
 
 ```py
 print('a')
